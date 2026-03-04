@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 210 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 12%;
+
+    --primary: 170 80% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 20% 12%;
+
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 10% 50%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 170 80% 36%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 170 80% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 210 20% 12%;
+    --sidebar-border: 210 15% 90%;
+    --sidebar-ring: 170 80% 36%;
+
+    /* Custom tokens */
+    --hero-bg: 0 0% 99%;
+    --section-alt: 210 20% 97%;
+    --teal: 170 80% 36%;
+    --teal-light: 170 60% 94%;
+    --orange: 25 95% 53%;
+    --orange-light: 25 90% 94%;
+    --cyan: 190 80% 42%;
+    --cyan-light: 190 60% 94%;
+    --purple: 270 60% 55%;
+    --purple-light: 270 50% 94%;
+    --emerald: 155 70% 40%;
+    --emerald-light: 155 50% 94%;
+
+    --shadow-card: 0 4px 24px -4px hsl(210 20% 12% / 0.06);
+    --shadow-card-hover: 0 8px 32px -4px hsl(210 20% 12% / 0.12);
+    --shadow-nav: 0 1px 8px 0 hsl(210 20% 12% / 0.04);
+  }
+
+  .dark {
+    --background: 210 20% 6%;
+    --foreground: 210 15% 95%;
+    --card: 210 20% 8%;
+    --card-foreground: 210 15% 95%;
+    --popover: 210 20% 8%;
+    --popover-foreground: 210 15% 95%;
+    --primary: 170 80% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 14%;
+    --secondary-foreground: 210 15% 95%;
+    --muted: 210 15% 14%;
+    --muted-foreground: 210 10% 60%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 170 80% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 xl:px-32;
+  }
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .nav-shadow {
+    box-shadow: var(--shadow-nav);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
